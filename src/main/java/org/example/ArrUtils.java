@@ -39,32 +39,37 @@ public class ArrUtils {
 
         int index = -1;
 
-        arr = sortBubble(arr);
+        //arr = sortBubble(arr);
 
         int i = 0;
         int j = arr.length;
 
         while (true){
 
-            System.out.println(Arrays.toString(arr));
+            //System.out.println(Arrays.toString(arr));
 
             int tmpIndex = (j+i)/2;
+
+            if(tmpIndex < 0 || tmpIndex >= arr.length){
+                break;
+            }
 
             if(arr[tmpIndex]==goal) {
                 index = tmpIndex;
                 break;
             }
 
-            if(tmpIndex == 0 || tmpIndex == arr.length){
+            if(arr[tmpIndex]<goal){
+                i = tmpIndex+1;
+            } else {
+                j = tmpIndex-1;
+            }
+
+            if(j < i || i > j){
                 break;
             }
 
-            if(arr[tmpIndex]<goal){
-                i = tmpIndex;
-            } else {
-                j = tmpIndex;
-            }
-
+            /*
             //Обнулить часть массива для красоты
             for (int k = 0; k < i; k++) {
                 arr[k] = 0;
@@ -72,7 +77,7 @@ public class ArrUtils {
 
             for (int k = j+1; k < arr.length; k++) {
                 arr[k] = 0;
-            }
+            }*/
 
         }
 

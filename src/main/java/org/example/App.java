@@ -11,7 +11,7 @@ public class App
     public static void main( String[] args )
     {
 
-        int[] arr = new int[]{1,-8,15,22,31,10,10,0};
+        int[] arr = new int[]{1,-8,15,22,31,10,10,0,100};
 
         System.out.println(Arrays.toString(arr));
 
@@ -20,6 +20,8 @@ public class App
         arrUtils.sortBubble(arr);
 
         System.out.println(Arrays.toString(arr));
+
+        arr = new int[]{-100,-8, 0, 1, 10, 10, 15, 22, 31};
 
         int goal = -8;
         System.out.println("###################### Searching... ######################");
